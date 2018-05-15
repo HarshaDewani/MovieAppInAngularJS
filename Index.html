@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html ng-app="movieTime">
+<head>
+    <base href="/">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="../Scripts/bootstrap.min.js"></script>
+    <link href="Styles/Style.css" rel="stylesheet" />
+    <script src="../Scripts/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.17/angular-ui-router.min.js"></script>
+    <script src="AngularScripts/script.js"></script>
+    <script src="AngularScripts/movieListService.js"></script>
+    <script src="AngularScripts/movieDetailsService.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <title>MovieTime with AngularJS</title>
+    <meta charset="utf-8" />
+</head>
+<body>
+    <div class="col-sm-12 text-center">
+        <div class="row">
+            <nav class="navbar navbar-default text-center">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <a class="navbar-brand">WebSiteName</a>
+                    </div>
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a ui-sref="BrowseMovie">Home</a></li>
+                        <li><a ui-sref="about">About</a></li>
+                        <li><a>Contact Us</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    <div class="col-sm-12 container-fluid text-center">
+        <div class="row">
+            <div class="col-sm-3"></div>
+            <div id="mainDiv" class="col-sm-6  text-center">
+                <ui-view>
+
+                </ui-view>
+            </div>
+            <div class="col-sm-3"></div>
+        </div>
+    </div>
+    <div class="col-sm-12 text-center">
+        <div class="row">
+            <div class="navbar-default"><h4>Subject to copyright</h4></div>
+        </div>
+    </div>
+
+</body>
+
+</html>

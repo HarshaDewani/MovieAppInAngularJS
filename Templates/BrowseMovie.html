@@ -1,0 +1,34 @@
+﻿<div class="table-responsive">
+    <input type="text" placeholder="Search for movies" ng-model="searchText.title" />
+    <br />
+
+    <img class="spinner" ng-show="spinner" />
+
+    <table style="" class="table table-condensed text-info table-hover table stripped">
+        <thead>
+            <tr style="text-align:left">
+                <th></th>
+                <th>Title & Description</th>
+                <th>Rating</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="movies in movieList | filter:searchText" style="text-align:justify">
+                <td> <a ui-sref="movieDetails({title: movies.title})"><img ng-src="{{movies.posterthumb}}" alt="No image found" class="img-responsive" /></a></td>
+                <td>
+                    <div><a ui-sref="movieDetails({title: movies.title})"><b>{{movies.title}}</b></a></div>
+                    <div>{{movies.description}}</div>
+                    <div><b>Director: </b> {{movies.director}}</div>
+                    <div>
+                        <b>Actors: </b><span ng-repeat="listOfActors in movies.stars ">{{listOfActors}},</span>
+                    </div>
+                </td>
+                <td>
+                    <span class="glyphicon glyphicon-star" style="color:#F3B03E"></span>
+                    {{movies.rating}}
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+

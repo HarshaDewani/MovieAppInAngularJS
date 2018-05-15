@@ -1,0 +1,50 @@
+﻿.sidenav {
+    padding-top: 50px;
+    background-color: #f1f1f1;
+    height: 100%;
+}
+footer {
+    padding: 20px;
+    background-color: #f1f1f1;
+}
+.spinner {
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid blue;
+    border-bottom: 16px solid blue;
+    width: 100px;
+    height: 100px;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+}
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+#mainDiv {
+    border: 1px solid lightgrey ;
+    box-sizing: border-box;
+    
+}
+  
+  
+input[type=text], select{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+#trailerWindow{
+    margin:2px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}

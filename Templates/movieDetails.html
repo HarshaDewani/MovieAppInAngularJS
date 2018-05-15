@@ -1,0 +1,29 @@
+﻿
+
+<div id="trailerWindow" class="col-sm-12 container-fluid text-center">
+
+    <div class="poster col-sm-4">
+        <img ng-src="{{getMovieDetailsCtrl.movieDetails.posterThumb}}" alt="No image found" class="img-responsive" style="width:100%;" />
+    </div>
+    <div class="video col-sm-8">
+        <video src="{{getMovieDetailsCtrl.movieDetails.videoUrl | trustUrl}}" id="video1" style="width:100%;height:auto" controls>
+       
+        </video>
+    </div>
+</div>
+
+<div class="col-sm-12  container-fluid text-info" id="descriptionDiv">
+    <div class="row">
+        <p> <b>Description: </b>{{getMovieDetailsCtrl.movieDetails.description}} </p>
+        <p><b>Released Date: </b>{{getMovieDetailsCtrl.movieDetails.release_date|date}}</p>
+        <p> <b>Director: </b>{{getMovieDetailsCtrl.movieDetails.director}}</p>
+        <b>Writers: </b><p ng-repeat="ListOfWriters in getMovieDetailsCtrl.movieDetails.writers">{{ListOfWriters}}</p>
+        <b>Actors: </b>  <p ng-repeat="ListOfActors in getMovieDetailsCtrl.movieDetails.stars">
+            {{ListOfActors}}
+        </p>
+    </div>
+   <hr />
+    <h4><a ui-sref="BrowseMovie">Browse back to movies list</a></h4>
+</div>
+
+
